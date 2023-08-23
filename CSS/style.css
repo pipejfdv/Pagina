@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:black;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Contenedor principal - TODO */
+.contenedor{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    
+}
+/*Navegacion estilos*/
+.menu{
+    width: 300px;
+    border-radius: 5px 16px 16px 5px;
+    position: relative;
+    z-index: 10;
+    justify-content: end;
+}
+
+/*ejecucioan cuando se ponga en modo active el menu para su desplazamiento*/
+.menu .active{
+    left: -100%;
+    position: relative;
+}
+/* Botonde menu */
+.boton .active{
+    left: -300px;
+    position: relative;
+}
+.boton{
+    position: relative;
+    z-index: 10;
+    width: 100px;
+    height: 15px;
+}
+.nav{
+    width: 300px;
+    z-index: 1000;
+    transition: left 0.3s ease;
+}
+
+
+.nav__link{
+    color: #ffffff;
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+}
+
+.nav__link-inside:hover{
+    background: #D90739;
+}
+
+.list{
+    background-color: rgb(25, 18, 49);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px 16px 16px 5px;
+}
+
+.list__item{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.list__item-click{
+    cursor: pointer;
+}
+.list__button{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 70%;
+    margin: auto;
+}
+
+.list__arrow{
+    margin-left: auto;
+    transition: transform .3s;
+}
+
+.arrow .list__arrow{
+    transform: rotate(90deg);
+}
+
+
+.list__show{
+    width: 80%;
+    margin-left: auto;
+    border-left: 2px solid white;
+    list-style: none;
+    transition: height .4s;
+    height: 0;
+}
+
+.intro{
+    position: relative;
+    z-index: 10;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.capa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(122, 114, 163);
+    opacity: 0.5;
+    /* ajustar el color de acuerdo al fondo */
+    mix-blend-mode: overlay;
+}
+
+/* Icono mio */
+.Icono{
+    position: relative;
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: auto;
+    /* background:rgb(25, 18, 49); */
+    z-index: 10;
+}
+
+.icono_Imagen{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
