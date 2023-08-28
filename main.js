@@ -33,3 +33,16 @@ document.addEventListener('DOMContentLoaded', function () {
     menuButton.classList.toggle('active');
   });
 });
+
+let mi_Imagen = document.getElementById('foto');
+let texto_Foto = document.getElementById('texto_Nombre');
+
+mi_Imagen.addEventListener('mouseover', ()=>{
+  mi_Imagen.style.transform = 'translate(-15px, -10px)';
+  texto_Foto.style.display = 'block';
+});
+
+mi_Imagen.addEventListener('mouseout', ()=>{
+  mi_Imagen.style.transform = 'translate(0,0)';
+  texto_Foto.style.display = 'none';
+});
